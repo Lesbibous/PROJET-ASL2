@@ -1,0 +1,310 @@
+/* Enlève les marges par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    background-color: #f3f3f3;
+}
+
+/* En-tête */
+header {
+    background-color: rgb(255, 255, 255);
+    padding: 5px 20px;
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    margin-left: 20px ;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #242424;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0%;
+    padding: 0%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fade 12s infinite;
+}
+
+/* Animation du slideshow */
+.slide:nth-child(1) { animation-delay: 8s; }
+.slide:nth-child(2) { animation-delay: 4s; }
+.slide:nth-child(3) { animation-delay: 8s; }
+.slide:nth-child(4) { animation-delay: 4s; }
+
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    50% { opacity: 1; }
+    90% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Texte sur le slideshow */
+.slideshow-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.services {
+    flex: 1;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #d90000;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 30px 40px;
+}
+
+.section1 {
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Espacement entre les éléments */
+    width: 100vw; /* Largeur totale de l'écran */
+    height: 40vh; /* Hauteur totale */
+    background-color: #f5f5f5; /* Couleur de fond */
+    padding: 30 px 0;
+}
+
+.imagesection1 {
+    width: 25%; /* Réduction pour laisser de la place au texte */
+    display: flex;
+}
+
+.imagesection1 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Évite la déformation */
+}
+
+.textesection1 {
+    flex: 1;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #d90000;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    display: inline; /* Permet d'éviter que la bordure prenne toute la largeur */
+    position: relative;
+}
+
+.textesection1::before,
+.textesection1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 30px; /* Largeur de la bordure */
+    height: 3px; /* Épaisseur de la bordure */
+    background-color: black;
+}
+
+.textesection1::before {
+    top: -5px; /* Position de la bordure du haut */
+    transform: translateX(-50%);
+}
+
+.textesection1::after {
+    bottom: -5px; /* Position de la bordure du bas */
+    transform: translateX(-50%);
+}
+
+.mission-container {
+    text-align: center;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.subtitle {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #d90000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.mission-text {
+    width: 50%;
+}
+
+.mission-text h3,
+.values h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mission-text p {
+    font-size: 25px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.values {
+    width: 40%;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #d90000;
+}
+
+.mission-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mission-images img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.mission-container {
+    border-top: 4px solid black;  /* Bordure noire en haut */
+    border-bottom: 4px solid black;  /* Bordure noire en bas */
+    padding: 40px 20px;  /* Augmente l’espace intérieur */
+    font-size: 1.5em;  /* Augmente la taille de la police */
+    line-height: 1.8;  /* Augmente l'espacement entre les lignes */
+    text-align: center;  /* Centre le texte */
+    font-weight: bold;  /* Rend le texte plus visible */
+    width: 80%;  /* Ajuste la largeur */
+    margin: auto;  /* Centre le bloc */
+}
+
+
+/* Conteneur des cartes en grille */
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grille adaptative */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-content: center; /* Centrer les cartes */
+    width: 100%;
+    max-width: 1000px; /* Largeur max pour éviter trop d'étalement */
+    margin: auto;
+    padding: 20px;
+}
+
+/* Cartes de services */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+/* Images des cartes */
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Titre des cartes */
+.service-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    padding: 10px 20px;
+    text-align: center;
+}  
